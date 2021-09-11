@@ -96,7 +96,9 @@ namespace Lab02_01
 
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            manCategorias frm = new manCategorias();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void toolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -114,6 +116,27 @@ namespace Lab02_01
         private void mnuSistemaSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mnuManProductos_Click(object sender, EventArgs e)
+        {
+            manProductos frm = new manProductos();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuManProveedores_Click(object sender, EventArgs e)
+        {
+            manProveedores frm = new manProveedores();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuManClientes_Click(object sender, EventArgs e)
+        {
+            manClientes frm = new manClientes();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

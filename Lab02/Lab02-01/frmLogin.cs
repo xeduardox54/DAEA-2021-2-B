@@ -43,9 +43,14 @@ namespace Lab02_01
         }
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            String user = "Eduardo";
+            String pass = "clave";
             PrincipalMDI principal = new PrincipalMDI();
-            principal.Show();
-            this.Hide();
+            if (txtUsuario.Text == user && txtPassword.Text == pass)
+            {
+                principal.Show();
+                this.Hide();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

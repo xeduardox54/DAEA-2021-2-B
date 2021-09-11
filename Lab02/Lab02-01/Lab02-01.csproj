@@ -150,6 +150,18 @@
     <EmbeddedResource Include="EjemploMDI.resx">
       <DependentUpon>EjemploMDI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="manCategorias.resx">
+      <DependentUpon>manCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manClientes.resx">
+      <DependentUpon>manClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manProductos.resx">
+      <DependentUpon>manProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manProveedores.resx">
+      <DependentUpon>manProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="manUsuario.resx">
       <DependentUpon>manUsuario.cs</DependentUpon>
     </EmbeddedResource>

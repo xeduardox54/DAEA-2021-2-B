@@ -108,6 +108,27 @@ namespace Lab03
 
         private void btnLogear_Click(object sender, EventArgs e)
         {
+            if (conn.State == ConnectionState.Open)
+            {
+                String sql = "SELECT COUNT(*) FROM tbl_usuario WHERE usuario_nombre=@user AND usuario_password=@password";
+                SqlDataAdapter cmd = new SqlDataAdapter(sql, conn);
+                cmd.SelectCommand.Parameters.AddWithValue("@user", txtUsuario.Text);
+                cmd.SelectCommand.Parameters.AddWithValue("@password", txtPassword.Text);
+
+                DataTable dt = new DataTable();  
+                cmd.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("Usuario válido");
+                }
+                else
+                    MessageBox.Show("Usuario inválido");
+
+            }
+            else
+            {
+                MessageBox.Show("La conexión esta cerrada");
+            }
         }
     }
 }

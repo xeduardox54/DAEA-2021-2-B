@@ -130,5 +130,11 @@ namespace Lab03
                 MessageBox.Show("La conexión esta cerrada");
             }
         }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            Cursos curso = new Cursos(conn);
+            curso.Show();
+        }
     }
 }

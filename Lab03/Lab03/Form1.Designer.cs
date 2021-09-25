@@ -43,6 +43,7 @@ namespace Lab03
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnPersona = new System.Windows.Forms.Button();
             this.btnLogear = new System.Windows.Forms.Button();
+            this.btnCursos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -156,7 +157,7 @@ namespace Lab03
             // 
             // btnPersona
             // 
-            this.btnPersona.Location = new System.Drawing.Point(116, 190);
+            this.btnPersona.Location = new System.Drawing.Point(75, 189);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.Size = new System.Drawing.Size(75, 23);
             this.btnPersona.TabIndex = 12;
@@ -166,19 +167,30 @@ namespace Lab03
             // 
             // btnLogear
             // 
-            this.btnLogear.Location = new System.Drawing.Point(197, 190);
+            this.btnLogear.Location = new System.Drawing.Point(237, 189);
             this.btnLogear.Name = "btnLogear";
-            this.btnLogear.Size = new System.Drawing.Size(75, 23);
+            this.btnLogear.Size = new System.Drawing.Size(81, 23);
             this.btnLogear.TabIndex = 13;
             this.btnLogear.Text = "Logear";
             this.btnLogear.UseVisualStyleBackColor = true;
             this.btnLogear.Click += new System.EventHandler(this.btnLogear_Click);
+            // 
+            // btnCursos
+            // 
+            this.btnCursos.Location = new System.Drawing.Point(156, 189);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(75, 23);
+            this.btnCursos.TabIndex = 14;
+            this.btnCursos.Text = "Cursos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 224);
+            this.Controls.Add(this.btnCursos);
             this.Controls.Add(this.btnLogear);
             this.Controls.Add(this.btnPersona);
             this.Controls.Add(this.btnDesconectar);
@@ -216,6 +228,7 @@ namespace Lab03
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnPersona;
         private System.Windows.Forms.Button btnLogear;
+        private System.Windows.Forms.Button btnCursos;
     }
 }
 

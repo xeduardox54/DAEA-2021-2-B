@@ -3,20 +3,10 @@
     ViewBag.Title = "Buscar";
 }
 
-<h2>Buscar persona</h2>
+<h2>Buscar</h2>
 
 @using (Html.BeginForm())
 {
-    <div class="row">
-        <div class="col-md-2">
-            @Html.Label("Buscar por nombre o apellido: ")
-        </div>
-        <div class="col-md-5">
-            @Html.TextBox("txtBuscar")
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
     <div class="editor-row">
         <div class="editor-label">
             @Html.LabelFor(model => model.Nombre)
@@ -25,5 +15,60 @@
             @Html.EditorFor(model => model.Nombre)
         </div>
     </div>
-    <input type="submit" value="submit" />
+    <input type="submit" value="Buscar" />
 }
+
+@using (Html.BeginForm())
+{
+    <h3>Busqueda: </h3>
+    <div class="row">
+        <div class="col-md-2">
+            <label> @Html.LabelFor(model => model.PersonaID)</label>
+        </div>
+        <div class="col-md-5">
+            @Html.TextBoxFor(model => model.PersonaID)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>@Html.LabelFor(model => model.Nombre)</label>
+        </div>
+        <div class="col-md-5">
+            @Html.TextBoxFor(model => model.Nombre)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>@Html.LabelFor(model => model.Apellido)</label>
+        </div>
+        <div class="col-md-5">
+            @Html.TextBoxFor(model => model.Apellido)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>@Html.LabelFor(model => model.FechaNac)</label>
+        </div>
+        <div class="col-md-5">
+            @Html.TextBoxFor(model => model.FechaNac)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>@Html.LabelFor(model => model.Direccion)</label>
+        </div>
+        <div class="col-md-5">
+            @Html.TextBoxFor(model => model.Direccion)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>@Html.LabelFor(model => model.Email)</label>
+        </div>
+        <div class="col-md-5">
+            @Html.TextBoxFor(model => model.Email)
+        </div>
+    </div>
+}
+
+@Html.ActionLink("Listar personas", "Listar", "Persona")

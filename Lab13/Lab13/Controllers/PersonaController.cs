@@ -85,7 +85,12 @@ namespace Lab13.Controllers
             Persona persona = (from p in personas where p.Nombre == word select p).FirstOrDefault();
             return View(persona);
         }
-        public ActionResult Buscar ()
+        public ActionResult Buscar()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Buscar(Persona persona)
         {
             List<Persona> personas = new List<Persona>();
             personas.Add(new Persona
@@ -115,7 +120,9 @@ namespace Lab13.Controllers
                 FechaNac = Convert.ToDateTime("1982-02-14"),
                 Email = "carlos@mail.com"
             });
-            return View(personas);
+
+            Persona FindPersona = (from p in personas where p.Nombre == persona.Nombre || p.Apellido == persona.Nombre select p).FirstOrDefault();
+            return View(FindPersona);
         }
     }
 }

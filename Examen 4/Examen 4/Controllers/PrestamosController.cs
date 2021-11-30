@@ -12,16 +12,16 @@ namespace Examen_4.Controllers
     {
         #region Contexto
         //ATRIBUTO CONTEXTO
-        private db _contexto;
+        private BibliotecaEntities _contexto;
 
         //PROPIEDAD CONTEXTO
-        public db Contexto
+        public BibliotecaEntities Contexto
         {
             set { _contexto = value; }
             get
             {
                 if (_contexto == null)
-                    _contexto = new db();
+                    _contexto = new BibliotecaEntities();
                 return _contexto;
             }
         }
@@ -30,7 +30,7 @@ namespace Examen_4.Controllers
         // GET: Prestamos
         public ActionResult Index()
         {
-            return View();
+            return View(Contexto.Prestamos.ToList());
         }
 
         // GET: Prestamos/Create/

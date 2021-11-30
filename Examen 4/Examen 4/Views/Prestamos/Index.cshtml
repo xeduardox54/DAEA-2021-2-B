@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Examen4.Prestamos>
+﻿@model IEnumerable<Prestamos>
 
 @{
     ViewBag.Title = "Index";
@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Nuevo Prestamos", "Create")
+    @Html.ActionLink("Nuevo Prestamo", "Create")
 </p>
 <table class="table table-dark table-striped">
     <tr>
@@ -25,6 +25,8 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FecDevolucion)
+        </th>
+        <th>
         </th>
     </tr>
     @foreach (var item in Model)
@@ -47,7 +49,6 @@
             </th>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id = item.IdPrestamo }) |
-                @Html.ActionLink("Detalles", "Details", new { id = item.IdPrestamo }) |
                 @Html.ActionLink("Borrar", "Delete", new { id = item.IdPrestamo })
             </td>
         </tr>
